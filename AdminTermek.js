@@ -31,7 +31,7 @@ export default class AdminTermek{
                 <td><img src="${this.#obj.kep}" alt="${this.#obj.nev}"></td>
                 <td>${this.#obj.ar}</td>
                 <td>${this.#obj.leiras}</td>
-                <td><button id="Torles${this.#index}">Törlés</button><button>Szerkesztés</button></td>
+                <td><button class="torlesgomb" id="Torles${this.#index}">Törlés</button><button class="szerkesztesgomb">Szerkesztés</button></td>
             </tr>`
             this.szuloElem.insertAdjacentHTML("beforeend", kod);
     }
