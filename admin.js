@@ -10,3 +10,8 @@ window.addEventListener("torles", function (event) {
     FEGYVERLISTA.splice(event.detail,1)
     new AdminTabla(FEGYVERLISTA,szuloELEM);
 });
+
+window.addEventListener("ujTermekHozzaadva", function (event) {
+    console.log("Új termék hozzáadva:", event.detail);
+    new AdminTabla(FEGYVERLISTA,szuloELEM);
+});

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Új termék hozzáadása</title>
+    <link rel="stylesheet" href="admin.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="hozzaad.css">
+    <script type="module" src="hozzaad.js"></script>
+</head>
+<body>
+    <h1>Új termék hozzáadása</h1>
+
+    <form id="hozzaadForm">
+        <div>
+            <label for="nev">Termék neve</label><br>
+            <input type="text" id="nev" name="nev" required>
+        </div>
+
+        <div>
+            <label for="kep">Kép elérési útja</label><br>
+            <input type="text" id="kep" name="kep" placeholder="Kepek/termek.jpg" required>
+        </div>
+
+        <div>
+            <label for="ar">Ár (Digit)</label><br>
+            <input type="number" id="ar" name="ar" step="100" min="0" required>
+        </div>
+
+        <div>
+            <label for="leiras">Leírás</label><br>
+            <textarea id="leiras" name="leiras" rows="4"></textarea>
+        </div>
+
+        <div>
+            <button type="submit" class="hozzaadasgomb">Hozzáadás</button>
+        </div>
+    </form>
+</body>
+</html>
