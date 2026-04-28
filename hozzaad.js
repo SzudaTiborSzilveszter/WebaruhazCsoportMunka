@@ -1,22 +1,22 @@
-import { FEGYVERLISTA } from "./adat.js";
+import { addTermek } from "./adat.js";
 
 const form = document.querySelector("#hozzaadForm");
 
-form.addEventListener("submit", (event) => {
+form.addEventListener("submit", async (event) => {
     event.preventDefault();
+    
     const ujFegyver = new FormData(form);
     const ertekek = Object.fromEntries(ujFegyver.entries());
     
     const ujTermek = {
         nev: ertekek.nev,
         kep: ertekek.kep,
-        ar: ertekek.ar + " Digit",
+        ar: parseInt(ertekek.ar),
         leiras: ertekek.leiras
     };
     
-    FEGYVERLISTA.push(ujTermek);
-    window.dispatchEvent(new CustomEvent("ujTermekHozzaadva", { detail: ujTermek }));
+    await addTermek(ujTermek);
     
-    console.log("Új termék:", ujTermek);
-    console.log("FEGYVERLISTA:", FEGYVERLISTA);
+    alert("Termék sikeresen hozzáadva az adatbázishoz!");
+    form.reset();
 });
