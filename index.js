@@ -1,32 +1,8 @@
-<<<<<<< HEAD
-import { getTermekek } from "./adat.js";
-=======
->>>>>>> 2beb07a8eee9cdd2c17b00784c04f02a8de138ef
 import Termekek from "./Termekek.js";
 
 const API_URL = "http://localhost:3000/api/termekek";
 const szuloELEM = document.querySelector(".kartyak");
 const kosarELEM = document.querySelector("#kosar");
-<<<<<<< HEAD
-let frontendLista = [];
-const KOSARBAN = [];
-
-async function init() {
-    frontendLista = await getTermekek(); 
-    // Ha megjött, kirajzoljuk
-    new Termekek(frontendLista, szuloELEM);
-}
-
-// Oldal betöltésekor indítjuk
-init();
-
-window.addEventListener("kosarba", function(event){
-    console.log("Kosárba gomb megnyomva, index:", event.detail);
-    KOSARBAN.push(frontendLista[event.detail]);
-    console.log("Kosár tartalma:", KOSARBAN);
-    // Ide majd kell egy kosár megjelenítő logika, de az adat már benne van a tömbben!
-});
-=======
 const kosarSzamELEM = document.querySelector("#kosarSzam");
 
 const KOSARBAN = []; 
@@ -65,4 +41,3 @@ if (kosarELEM) {
 }
 
 fegyverekBetoltese();
->>>>>>> 2beb07a8eee9cdd2c17b00784c04f02a8de138ef
